@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTheme } from "../ThemeContext";
 
 const skills = [
   {
@@ -23,7 +24,7 @@ const skills = [
   },
   {
     name: "C/C++",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
   },
   {
     name: "Postman",
@@ -49,7 +50,10 @@ const skills = [
     name: "Firebase",
     logo: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
   },
-  { name: "MySQL", logo: "/mysql.png" },
+  { 
+    name: "MySQL", 
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" 
+  },
   {
     name: "Git",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg",
@@ -65,29 +69,35 @@ const skills = [
 ];
 
 const Skills = () => {
+  const { theme } = useTheme();
+  const changetheme = theme === 'dark' ? 'text-white' : 'text-gray-600';
+
   return (
-    <div className="text-center">
-      <h2 className="text-3xl font-bold  mb-6">🚀 Skills and Technologies</h2>
-      <p className="text-gray-500 mb-8">
+    <div id="skills" className="text-center px-4 py-8 md:py-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 dark:text-white">🚀 Skills and Technologies</h2>
+      <p className={`${changetheme} mb-6 md:mb-8 text-base md:text-lg px-2 text-bold`}>
         Using a combination of cutting-edge technologies and open-source tools.
       </p>
 
-      {/* Skills Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mx-[10%] bg-gray-100">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            className="flex items-center justify-center bg-white shadow-md rounded-xl py-3 px-6 w-[50%] cursor-pointer"
-            initial={{ opacity: 0, y: 50 }} // Start Position
-            whileInView={{ opacity: 1, y: [30, -10, 0] }} // Smooth Up-Down Effect
-            whileHover={{ scale: 1.1 }} // Hover par zoom effect
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            viewport={{ once: false }}
-          >
-            <img src={skill.logo} alt={skill.name} className="w-8 h-8 mr-2" />
-            <span className="font-semibold">{skill.name}</span>
-          </motion.div>
-        ))}
+      {/* Skills Container */}
+      <div className="rounded-xl p-4 md:p-6 mx-auto max-w-6xl dark:bg-black">
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-6">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              className="flex items-center justify-center bg-white dark:bg-gray-800 shadow-md dark:shadow-gray-700 rounded-xl py-2 md:py-3 px-3 md:px-6 w-full mx-auto cursor-pointer hover:shadow-lg dark:hover:shadow-gray-600 transition-all duration-300"
+              initial={{ opacity: 0, y: 50 }} // Start Position
+              whileInView={{ opacity: 1, y: [30, -10, 0] }} // Smooth Up-Down Effect
+              whileHover={{ scale: 1.05 }} // Hover zoom effect
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: false }}
+            >
+              <img src={skill.logo} alt={skill.name} className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 mr-2 md:mr-3" />
+              <span className="font-semibold text-gray-800 dark:text-white text-sm md:text-base lg:text-lg">{skill.name}</span>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

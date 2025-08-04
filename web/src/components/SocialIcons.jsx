@@ -1,8 +1,14 @@
 import { FaGithub, FaLinkedin, FaXTwitter, FaEnvelope } from "react-icons/fa6"; // Gmail Icon Added
+import { useTheme } from "./ThemeContext";
 
 const SocialIcons = () => {
+  // Common styles
+  const { theme } = useTheme();
+  const changetheme = theme === 'dark' ? 'text-white' : 'text-black';
+  const commonIconStyle = `w-12 h-12  ${changetheme} transition-colors duration-300`;
+
   return (
-    <div className="flex flex-col items-center gap-4 fixed left-5 mr-2 bottom-[-10%] transform -translate-y-1/2">
+    <div className="flex flex-col items-center gap-4 fixed left-5 mr-2 bottom-[-10%] transform -translate-y-1/2 transition-colors duration-300 dark:text-white">
       {/* GitHub */}
       <a
         href="https://github.com"
@@ -10,7 +16,7 @@ const SocialIcons = () => {
         rel="noopener noreferrer"
         className="hover:-translate-y-1 transition-transform duration-300"
       >
-        <FaGithub className="w-12 h-12 text-black" />
+        <FaGithub className={commonIconStyle} />
       </a>
 
       {/* LinkedIn */}
@@ -20,7 +26,7 @@ const SocialIcons = () => {
         rel="noopener noreferrer"
         className="hover:-translate-y-1 transition-transform duration-300"
       >
-        <FaLinkedin className="w-12 h-12 text-black" />
+        <FaLinkedin className={commonIconStyle} />
       </a>
 
       {/* Twitter (X) */}
@@ -30,15 +36,17 @@ const SocialIcons = () => {
         rel="noopener noreferrer"
         className="hover:-translate-y-1 transition-transform duration-300"
       >
-        <FaXTwitter className="w-12 h-12 text-black" />
+        <FaXTwitter className={commonIconStyle} />
       </a>
 
       {/* Gmail */}
       <a
-        href="mailto:your-email@gmail.com" // Replace with your email
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=wok.muhammadnihal@gmail.com&su=Portfolio Contact&body=Hi Nihal, I saw your portfolio and would like to connect!"
+        target="_blank"
+        rel="noopener noreferrer"
         className="hover:-translate-y-1 transition-transform duration-300"
       >
-        <FaEnvelope className="w-12 h-12 text-black" /> {/* Gmail Icon */}
+        <FaEnvelope className={commonIconStyle} />
       </a>
     </div>
   );

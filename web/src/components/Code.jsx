@@ -1,19 +1,17 @@
-import React from "react";
 import "./code.css";
 
 const Code = () => {
   return (
-    <div className="bg-[#300924] max-w-xl p-4 rounded-lg border border-[#F8DB46]">
-      <div className="bg-[#2d0b24] text-white p-6 rounded-lg font-mono text-sm">
+    <div className="bg-[#300924] dark:bg-black max-w-sm sm:max-w-xl p-4 rounded-lg border border-[#F8DB46] dark:border-gray-700 transition-colors duration-300">
+      <div className="bg-[#2d0b24] dark:bg-gray-900 text-white dark:text-gray-100 sm:p-6  rounded-lg font-mono text-sm transition-colors duration-300">
         <pre>
           <code>
             <span className="text-yellow-400">{`const `}</span>
-            <span className="blink absolute left-10"></span>{" "}
-            {/* Cursor effect */}
+            <span className="blink"></span>
             <span className="text-yellow-500">{`HelloWorld `}</span>
             <span className="text-white">{`= {`}</span>
             <br />
-            <div className="ml-6 space-y-2">
+            <div className="ml-3 sm:ml-6 space-y-1 sm:space-y-2">
               <div>
                 <span className="text-green-400">{`"_id": `}</span>
                 <span className="text-white">{`"127.0.0.1",`}</span>
@@ -29,14 +27,24 @@ const Code = () => {
               <div>
                 <span className="text-green-400">{`"technologies": `}</span>
                 <span className="text-white">{`[`}</span>
-                <span className="text-white">{` "js", "react", "node", "express" , ..." `}</span>
+                <span className="text-white">
+                  <span className="block lg:hidden leading-[0.5rem] h-2">
+                    <br />
+                  </span>
+                  {` "js", "react", "node", "express", ... `}
+                </span>
                 <span className="text-white">{`]`}</span>
                 <span className="text-white">{`,`}</span>
               </div>
               <div>
                 <span className="text-green-400">{`"interests": `}</span>
                 <span className="text-white">{`[`}</span>
-                <span className="text-white">{` "MERN", "AI", "DevOps", "AWS", "..." `}</span>
+                <span className="text-white">
+                  <span className="block lg:hidden leading-[0.5rem] h-2">
+                    <br />
+                  </span>
+                  {` "MERN", "AI", "DevOps", "AWS", ... `}
+                </span>
                 <span className="text-white">{`]`}</span>
               </div>
             </div>

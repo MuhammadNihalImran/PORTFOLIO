@@ -10,6 +10,8 @@ import digitalimg from "../../assets/images/digital.png";
 import studioimg from "../../assets/images/studio.png";
 import multiFromimg from "../../assets/images/multiform.png";
 import expenseimg from "../../assets/images/expanse.png";
+import { useTheme } from "../ThemeContext";
+
 
 const initialProjects = [
   {
@@ -80,14 +82,16 @@ const initialProjects = [
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
+  const { theme } = useTheme();
+  const changetheme = theme === 'dark' ? 'text-white' : 'text-gray-600';
 
   return (
-    <section className="container mx-auto text-center py-10">
-      <h2 className="text-4xl font-bold">Projects</h2>
-      <p className="text-gray-600">Check out some of my work</p>
+    <section id="work" className="container mx-auto text-center py-8 md:py-10 px-4">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold dark:text-white mb-2 md:mb-4">Projects</h2>
+      <p className={`text-lg md:text-xl font-semibold ${changetheme}  mb-6 md:mb-8`}>Check out some of my work</p>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-8 mx-[15%]">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-8 max-w-6xl mx-auto">
         {initialProjects
           .slice(0, showAll ? initialProjects.length : 4)
           .map((project) => (
@@ -97,7 +101,7 @@ const Projects = () => {
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <div
-                  className="relative p-8 group transition-transform duration-500"
+                  className="relative p-4 md:p-8 group transition-transform duration-500"
                   style={{ backgroundColor: project.bgColor }}
                 >
                   <img
@@ -106,14 +110,14 @@ const Projects = () => {
                     className="w-full"
                   />
                   <div className="absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-all duration-500">
-                    <Eye className="text-white text-4xl drop-shadow-lg" />
+                    <Eye className="text-white text-2xl md:text-4xl drop-shadow-lg" />
                   </div>
                 </div>
               </a>
 
               <div>
-                <div className="flex items-center justify-between px-5">
-                  <h3 className="text-lg font-semibold mt-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between px-3 md:px-5 py-2 md:py-3">
+                  <h3 className="text-lg md:text-xl font-bold mt-2 dark:text-white mb-2 sm:mb-0">
                     {project.title}
                   </h3>
                   <a
@@ -122,11 +126,11 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="group relative inline-flex items-center gap-2 view"
                   >
-                    <p className="text-sm text-gray-500 transition-all duration-300 group-hover:underline">
+                    <p className="text-sm md:text-base font-semibold text-gray-500 dark:text-white transition-all duration-300 group-hover:underline">
                       View Project
                     </p>
                     <i
-                      className="fa fa-external-link h-4 w-4 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-1"
+                      className="fa fa-external-link h-3 w-3 md:h-4 md:w-4 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-1"
                       aria-hidden="true"
                     ></i>
                   </a>
@@ -137,7 +141,7 @@ const Projects = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-gray-500 text-white text-xs py-1 px-4 mr-2 mt-2"
+                        className="rounded-full bg-gray-500 text-white text-xs py-1 px-2 md:px-4 mr-1 md:mr-2 mt-1 md:mt-2"
                       >
                         {tag}
                       </span>
@@ -152,7 +156,7 @@ const Projects = () => {
       {/* See All Projects Button */}
       <button
         onClick={() => setShowAll(!showAll)}
-        className="mt-6 px-6 py-3 bg-[#15803D] text-white rounded-full hover:bg-[#1E6A3F] cursor-pointer transition-all duration-500"
+        className="mt-6 md:mt-8 px-4 md:px-6 py-2 md:py-3 bg-[#15803D] text-white rounded-full hover:bg-[#1E6A3F] cursor-pointer transition-all duration-500 text-sm md:text-base"
       >
         {showAll ? "SHOW LESS" : "SEE ALL PROJECTS"}
       </button>
