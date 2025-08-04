@@ -50,9 +50,9 @@ const skills = [
     name: "Firebase",
     logo: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
   },
-  { 
-    name: "MySQL", 
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" 
+  {
+    name: "MySQL",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
   },
   {
     name: "Git",
@@ -70,12 +70,16 @@ const skills = [
 
 const Skills = () => {
   const { theme } = useTheme();
-  const changetheme = theme === 'dark' ? 'text-white' : 'text-gray-600';
+  const changetheme = theme === "dark" ? "text-white" : "text-gray-600";
 
   return (
     <div id="skills" className="text-center px-4 py-8 md:py-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 dark:text-white">🚀 Skills and Technologies</h2>
-      <p className={`${changetheme} mb-6 md:mb-8 text-base md:text-lg px-2 text-bold`}>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 dark:text-white">
+        🚀 Skills and Technologies
+      </h2>
+      <p
+        className={`${changetheme} mb-6 md:mb-8 text-base md:text-lg px-2 text-bold`}
+      >
         Using a combination of cutting-edge technologies and open-source tools.
       </p>
 
@@ -91,10 +95,16 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: [30, -10, 0] }} // Smooth Up-Down Effect
               whileHover={{ scale: 1.05 }} // Hover zoom effect
               transition={{ duration: 0.4, ease: "easeOut" }}
-              viewport={{ once: false }}
+              viewport={{ once: true, amount: 0.4 }}
             >
-              <img src={skill.logo} alt={skill.name} className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 mr-2 md:mr-3" />
-              <span className="font-semibold text-gray-800 dark:text-white text-sm md:text-base lg:text-lg">{skill.name}</span>
+              <img
+                src={skill.logo}
+                alt={skill.name}
+                className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 mr-2 md:mr-3"
+              />
+              <span className="font-semibold text-gray-800 dark:text-white text-sm md:text-base lg:text-lg">
+                {skill.name}
+              </span>
             </motion.div>
           ))}
         </div>

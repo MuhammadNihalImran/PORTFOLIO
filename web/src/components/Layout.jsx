@@ -8,27 +8,30 @@ import Contact from "./pages/Contact";
 import { ThemeProvider } from "./ThemeContext";
 import Socialicons from "./SocialIcons";
 import VerticalLine from "./VerticalLocation";
+import SmoothScroll from "../utils/SmoothScroll";
 
 const Layout = () => {
   return (
     <ThemeProvider>
-      <Navbar />
-      <div className="pt-20">
-        {/* Hero Section - Responsive Layout */}
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-5 px-4 py-8 lg:py-16">
-          <ProfileImage />
-          <Code />
+      <SmoothScroll />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <Navbar />
+          <div className="pt-20">
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-5 px-4 py-8 lg:py-16">
+              <ProfileImage />
+              <Code />
+            </div>
+            <div className="hidden md:block">
+              <Socialicons />
+              <VerticalLine />
+            </div>
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+          </div>
         </div>
-        {/* Show only on medium screens and above */}
-        <div className="hidden md:block">
-          <Socialicons />
-          <VerticalLine />
-        </div>
-        {/* Main Content Sections */}
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
       </div>
     </ThemeProvider>
   );
