@@ -8,6 +8,7 @@ const About = () => {
   const [displayedText, setDisplayedText] = useState("");
   const { theme } = useTheme();
   const changetheme = theme === "dark" ? "text-white" : "text-gray-700";
+  const changeH2theme = theme === "dark" ? "text-white" : "text-gray-800";
 
   useEffect(() => {
     let index = 0;
@@ -25,7 +26,7 @@ const About = () => {
       className="container mx-auto px-4 py-8 md:py-16 text-center"
     >
       <motion.h2
-        className={`text-3xl md:text-4xl lg:text-5xl text-gray-800 font-bold mb-4 md:mb-6 dark:text-white`}
+        className={`text-3xl md:text-4xl lg:text-5xl text-gray-800 font-bold mb-4 md:mb-6 ${changeH2theme}`}
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}

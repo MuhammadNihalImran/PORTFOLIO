@@ -71,10 +71,13 @@ const skills = [
 const Skills = () => {
   const { theme } = useTheme();
   const changetheme = theme === "dark" ? "text-white" : "text-gray-600";
+  const changeH2theme = theme === "dark" ? "text-white" : "text-gray-800";
 
   return (
     <div id="skills" className="text-center px-4 py-8 md:py-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-800 dark:text-white">
+      <h2
+        className={`text-3xl md:text-4xl font-bold mb-4 md:mb-6 ${changeH2theme}`}
+      >
         🚀 Skills and Technologies
       </h2>
       <p
@@ -84,13 +87,13 @@ const Skills = () => {
       </p>
 
       {/* Skills Container */}
-      <div className="rounded-xl p-4 md:p-6 mx-auto max-w-6xl dark:bg-black">
+      <div className="rounded-xl p-4 md:p-6 mx-auto max-w-6xl bg-white ">
         {/* Skills Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex items-center justify-center bg-white dark:bg-gray-800 shadow-md dark:shadow-gray-700 rounded-xl py-2 md:py-3 px-3 md:px-6 w-full mx-auto cursor-pointer hover:shadow-lg dark:hover:shadow-gray-600 transition-all duration-300"
+              className="flex items-center justify-center bg-white  shadow-md dark:shadow-gray-700 rounded-xl py-2 md:py-3 px-3 md:px-6 w-full mx-auto cursor-pointer hover:shadow-lg dark:hover:shadow-gray-600 transition-all duration-300"
               initial={{ opacity: 0, y: 50 }} // Start Position
               whileInView={{ opacity: 1, y: [30, -10, 0] }} // Smooth Up-Down Effect
               whileHover={{ scale: 1.05 }} // Hover zoom effect
@@ -102,7 +105,7 @@ const Skills = () => {
                 alt={skill.name}
                 className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 mr-2 md:mr-3"
               />
-              <span className="font-semibold text-gray-800 dark:text-white text-sm md:text-base lg:text-lg">
+              <span className="font-semibold text-gray-800  text-sm md:text-base lg:text-lg">
                 {skill.name}
               </span>
             </motion.div>

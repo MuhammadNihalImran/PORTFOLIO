@@ -6,11 +6,12 @@ import { useTheme } from "../ThemeContext";
 const Contact = () => {
   const { theme } = useTheme();
   const changetheme = theme === "dark" ? "text-white" : "text-gray-700";
+  const changeH2theme = theme === "dark" ? "text-white" : "text-gray-800";
 
   return (
     <section id="contact" className="container mx-auto px-4 py-16 text-center">
       <motion.h2
-        className="text-5xl font-bold mb-6 text-gray-800 dark:text-white"
+        className={`text-5xl font-bold mb-6 ${changeH2theme}`}
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}

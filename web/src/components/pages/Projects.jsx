@@ -83,13 +83,16 @@ const Projects = () => {
   const [showAll, setShowAll] = useState(false);
   const { theme } = useTheme();
   const changetheme = theme === "dark" ? "text-white" : "text-gray-600";
+  const changeH2theme = theme === "dark" ? "text-white" : "text-gray-800";
 
   return (
     <section
       id="work"
       className="container mx-auto text-center py-8 md:py-10 px-4"
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-2 md:mb-4">
+      <h2
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${changeH2theme} mb-2 md:mb-4`}
+      >
         Projects
       </h2>
       <p
