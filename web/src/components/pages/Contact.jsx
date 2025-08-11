@@ -5,7 +5,7 @@ import { useTheme } from "../ThemeContext";
 
 const Contact = () => {
   const { theme } = useTheme();
-  const changetheme = theme === 'dark' ? 'text-white' : 'text-gray-700';
+  const changetheme = theme === "dark" ? "text-white" : "text-gray-700";
 
   return (
     <section id="contact" className="container mx-auto px-4 py-16 text-center">
@@ -17,11 +17,13 @@ const Contact = () => {
       >
         Get In Touch
       </motion.h2>
-      
-      <p className={`text-xl font-semibold ${changetheme} max-w-2xl mx-auto mb-12`}>
-        Currently seeking internships for web and software development positions. Can start Imediately..
 
-        Also looking to build a team for projects & startup ideas or just make professional connections.
+      <p
+        className={`text-xl font-semibold ${changetheme} max-w-2xl mx-auto mb-12`}
+      >
+        Currently seeking internships for web and software development
+        positions. Can start Imediately.. Also looking to build a team for
+        projects & startup ideas or just make professional connections.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -37,7 +39,9 @@ const Contact = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Mail className="w-12 h-12 text-blue-600 mb-4" />
-          <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">Email</h3>
+          <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">
+            Email
+          </h3>
         </motion.a>
 
         <motion.a
@@ -52,14 +56,19 @@ const Contact = () => {
           whileTap={{ scale: 0.95 }}
           onClick={(e) => {
             // Fallback for browsers that don't support WhatsApp links
-            if (!navigator.userAgent.includes('Chrome') && !navigator.userAgent.includes('Firefox')) {
+            if (
+              !navigator.userAgent.includes("Chrome") &&
+              !navigator.userAgent.includes("Firefox")
+            ) {
               e.preventDefault();
-              window.open('https://wa.me/3453033270', '_blank');
+              window.open("https://wa.me/3453033270", "_blank");
             }
           }}
         >
           <Phone className="w-12 h-12 text-green-600 mb-4" />
-          <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">Phone</h3>
+          <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">
+            Phone
+          </h3>
         </motion.a>
 
         <motion.div
@@ -69,8 +78,12 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <MapPin className="w-12 h-12 text-red-600 mb-4" />
-          <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">Location</h3>
-          <p className="text-lg font-semibold text-gray-600 dark:text-white">Pakistan, Karachi</p>
+          <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">
+            Location
+          </h3>
+          <p className="text-lg font-semibold text-gray-600 dark:text-white">
+            Pakistan, Karachi
+          </p>
         </motion.div>
       </div>
 

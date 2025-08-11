@@ -77,13 +77,16 @@ const Navbar = () => {
             Contact
           </a>
 
-          <button
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`cursor-pointer text-indigo-800 dark:text-indigo-400 ${
               theme === "dark" ? "bg-[#1F2937]" : "bg-white"
             }  hover:text-white hover:bg-indigo-800 dark:hover:bg-indigo-600 rounded-2xl border-2 border-dashed border-indigo-800 dark:border-indigo-400 bg-white dark:bg-gray-800 px-4 py-2 font-semibold uppercase text-black dark:text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] dark:hover:shadow-[4px_4px_0px_white] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none`}
           >
             RESUME
-          </button>
+          </a>
 
           <button
             onClick={toggleTheme}
@@ -167,7 +170,9 @@ const Navbar = () => {
               Contact
             </a>
             <button className="w-full cursor-pointer text-indigo-800 dark:text-indigo-400 hover:text-white hover:bg-indigo-800 dark:hover:bg-indigo-600 rounded-2xl border-2 border-dashed border-indigo-800 dark:border-indigo-400 bg-white dark:bg-gray-800 px-4 py-3 font-semibold uppercase text-black dark:text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] dark:hover:shadow-[4px_4px_0px_white] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none">
-              RESUME
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                View Resume
+              </a>
             </button>
           </nav>
         </div>
