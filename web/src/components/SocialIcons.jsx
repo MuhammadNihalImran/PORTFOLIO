@@ -11,7 +11,7 @@ const SocialIcons = () => {
     <div className="flex flex-col items-center gap-4 fixed left-5 mr-2 bottom-[0.1%] transform -translate-y-1/2 transition-colors duration-300 dark:text-white">
       {/* GitHub */}
       <a
-        href="https://github.com"
+        href="https://github.com/MuhammadNihalImran"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:-translate-y-1 transition-transform duration-300"
@@ -21,7 +21,7 @@ const SocialIcons = () => {
 
       {/* LinkedIn */}
       <a
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/in/muhammad-nihal-sheikh-bb15b828a/"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:-translate-y-1 transition-transform duration-300"
@@ -31,7 +31,7 @@ const SocialIcons = () => {
 
       {/* Twitter (X) */}
       <a
-        href="https://twitter.com"
+        href="https://x.com/WMuhammdnihal"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:-translate-y-1 transition-transform duration-300"

@@ -91,7 +91,7 @@ const Contact = () => {
         <h3 className="text-3xl font-bold mb-6 dark:text-white">Follow Me</h3>
         <div className="flex justify-center space-x-6">
           <motion.a
-            href="https://github.com"
+            href="https://github.com/MuhammadNihalImran"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-colors"
@@ -101,7 +101,7 @@ const Contact = () => {
             <Github className="w-6 h-6" />
           </motion.a>
           <motion.a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/muhammad-nihal-sheikh-bb15b828a/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
@@ -111,7 +111,7 @@ const Contact = () => {
             <Linkedin className="w-6 h-6" />
           </motion.a>
           <motion.a
-            href="https://twitter.com"
+            href="https://x.com/WMuhammdnihal"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-blue-400 text-white rounded-full hover:bg-blue-500 transition-colors"
