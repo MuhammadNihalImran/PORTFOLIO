@@ -7,7 +7,7 @@ const About = () => {
 
   const [displayedText, setDisplayedText] = useState("");
   const { theme } = useTheme();
-  const changetheme = theme === 'dark' ? 'text-white' : 'text-gray-700';
+  const changetheme = theme === "dark" ? "text-white" : "text-gray-700";
 
   useEffect(() => {
     let index = 0;
@@ -20,9 +20,12 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="container mx-auto px-4 py-8 md:py-16 text-center">
+    <section
+      id="about"
+      className="container mx-auto px-4 py-8 md:py-16 text-center"
+    >
       <motion.h2
-        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 dark:text-white"
+        className={`text-3xl md:text-4xl lg:text-5xl text-gray-800 font-bold mb-4 md:mb-6 dark:text-white`}
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -30,7 +33,9 @@ const About = () => {
         About Me
       </motion.h2>
 
-      <p className={`text-lg md:text-xl font-semibold  ${changetheme} max-w-2xl md:max-w-3xl mx-auto leading-relaxed whitespace-pre-wrap px-2`}>
+      <p
+        className={`text-lg md:text-xl font-semibold  ${changetheme} max-w-2xl md:max-w-3xl mx-auto leading-relaxed whitespace-pre-wrap px-2`}
+      >
         {displayedText}
       </p>
     </section>

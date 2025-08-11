@@ -74,7 +74,7 @@ const Skills = () => {
 
   return (
     <div id="skills" className="text-center px-4 py-8 md:py-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 dark:text-white">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-800 dark:text-white">
         🚀 Skills and Technologies
       </h2>
       <p

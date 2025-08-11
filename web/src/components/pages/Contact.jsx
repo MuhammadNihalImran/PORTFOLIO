@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <section id="contact" className="container mx-auto px-4 py-16 text-center">
       <motion.h2
-        className="text-5xl font-bold mb-6 dark:text-white"
+        className="text-5xl font-bold mb-6 text-gray-800 dark:text-white"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}

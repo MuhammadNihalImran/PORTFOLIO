@@ -12,7 +12,6 @@ import multiFromimg from "../../assets/images/multiform.png";
 import expenseimg from "../../assets/images/expanse.png";
 import { useTheme } from "../ThemeContext";
 
-
 const initialProjects = [
   {
     id: 1,
@@ -83,12 +82,21 @@ const initialProjects = [
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
   const { theme } = useTheme();
-  const changetheme = theme === 'dark' ? 'text-white' : 'text-gray-600';
+  const changetheme = theme === "dark" ? "text-white" : "text-gray-600";
 
   return (
-    <section id="work" className="container mx-auto text-center py-8 md:py-10 px-4">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold dark:text-white mb-2 md:mb-4">Projects</h2>
-      <p className={`text-lg md:text-xl font-semibold ${changetheme}  mb-6 md:mb-8`}>Check out some of my work</p>
+    <section
+      id="work"
+      className="container mx-auto text-center py-8 md:py-10 px-4"
+    >
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-2 md:mb-4">
+        Projects
+      </h2>
+      <p
+        className={`text-lg md:text-xl font-semibold ${changetheme}  mb-6 md:mb-8`}
+      >
+        Check out some of my work
+      </p>
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-8 max-w-6xl mx-auto">
