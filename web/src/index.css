@@ -1,23 +1,21 @@
 @import "tailwindcss";
 
-body {
-  background-color: transparent; /* or remove this line */
-  color: #000000;
-}
-
-.dark body {
-  background-color: transparent; /* remove fixed background in dark too */
-  color: #ffffff;
-}
-
-html.dark {
-  color-scheme: dark;
-}
-
-* {
-  box-sizing: border-box;
-}
 html,
 body {
   overflow-x: hidden;
+}
+
+* {
+  max-width: 100%;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.no-scroll-x {
+  overflow-x: hidden !important;
 }

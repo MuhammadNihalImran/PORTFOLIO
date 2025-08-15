@@ -2,9 +2,9 @@ import "./code.css";
 
 const Code = () => {
   return (
-    <div className="bg-[#300924] dark:bg-black max-w-sm sm:max-w-xl p-4 rounded-lg border border-[#F8DB46] dark:border-gray-700 transition-colors duration-300">
-      <div className="bg-[#2d0b24] dark:bg-gray-900 text-white dark:text-gray-100 sm:p-6  rounded-lg font-mono text-sm transition-colors duration-300">
-        <pre>
+    <div className="bg-[#300924] dark:bg-black max-w-sm sm:max-w-xl p-4 rounded-lg border border-[#F8DB46] dark:border-gray-700 transition-colors duration-300 overflow-x-auto mx-auto">
+      <div className="bg-[#2d0b24] dark:bg-gray-900 text-white dark:text-gray-100 p-4 sm:p-6 rounded-lg font-mono text-sm transition-colors duration-300">
+        <pre className="whitespace-pre-wrap break-words">
           <code>
             <span className="text-yellow-400">{`const `}</span>
             <span className="blink"></span>
