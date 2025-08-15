@@ -17,7 +17,7 @@ const Layout = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <Navbar />
-          <div className="pt-20">
+          <div className="pt-20 ">
             <div className="flex flex-col lg:flex-row justify-center items-center gap-5 px-4 py-8 lg:py-16">
               <ProfileImage />
               <Code />
